@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <style>
+        .dropdownMenu {
+            position: absolute;
+            top: 100%;
+            background: #000000;
+        }
+
+        .dropdownMenu li {
+            display: none;
+        }
+
+        .navigationMenu li:hover .dropdownMenu li {
+            display: block;
+            color: aliceblue;
+        }
+
+        .navigationMenu li:hover .dropdownMenu {
+            perspective: 1000px;
+        }
+
+        .navigationMenu li:hover .dropdownMenu li {
+            transform-origin: top left;
+            opacity: 0;
+        }
+
+        .navigationMenu li:hover .dropdownMenu li:nth-child(1) {
+            animation: animate 300ms ease-in-out forwards;
+            animation-delay: -50ms;
+        }
+
+        .navigationMenu li:hover .dropdownMenu li:nth-child(2) {
+            animation: animate 300ms ease-in-out forwards;
+            animation-delay: 0ms;
+        }
+
+        .navigationMenu li:hover .dropdownMenu li:nth-child(3) {
+            animation: animate 300ms ease-in-out forwards;
+            animation-delay: 50ms;
+        }
+
+        .navigationMenu li:hover .dropdownMenu li:nth-child(4) {
+            animation: animate 300ms ease-in-out forwards;
+            animation-delay: 100ms;
+        }
+
+        .navigationMenu li:hover .dropdownMenu li:nth-child(5) {
+            animation: animate 300ms ease-in-out forwards;
+            animation-delay: 150ms;
+        }
+
+        .navigationMenu li:hover .dropdownMenu li:nth-child(6) {
+            animation: animate 300ms ease-in-out forwards;
+            animation-delay: 200ms;
+        }
+
+        .navigationMenu li:hover .dropdownMenu li:nth-child(7) {
+            animation: animate 300ms ease-in-out forwards;
+            animation-delay: 250ms;
+        }
+
+        .navigationMenu li:hover .dropdownMenu li:nth-child(8) {
+            animation: animate 300ms ease-in-out forwards;
+            animation-delay: 300ms;
+        }
+
+
+
+        @keyframes animate {
+            0% {
+                opacity: 0;
+                transform: rotateZ(90deg);
+            }
+
+            70% {
+                transform: skewX(10deg);
+            }
+
+            100% {
+                opacity: 1;
+                transform: rotateZ(0deg);
+            }
+        }
+    </style>
+    <div class='bg-black/50'>
+        <header
+            class='md:flex border-b-[1px] border-gray-700 py-6 items-center text-lg text-white justify-between px-6 md:px-20'>
+            <div class="md:hidden flex justify-between">
+
+                <a class='block md:hidden' href="/">
+                    <div class="logo">
+                        <img class='w-32 md:w-48' src="./images/admin-ajax.png" alt="" />
+                    </div>
+                </a>
+
+
+                <button class="relative mr-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="closeBtn hidden w-6 h-6 absolute top-0 left-0">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="openBtn w-6 h-6 absolute top-0 left-0">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
+                    </svg>
+                </button>
+
+
+
+            </div>
+            <a class=' md:block' href="/">
+                <div class="logo">
+                    <img class='w-32 md:w-48' src="../images/admin-ajax.png" alt="" />
+                </div>
+            </a>
+
+
+            <div class="navigationMenu mt-4">
+                <nav class='md:flex hidden gap-6'>
+                    <a href="/about">About </a>
+
+
+                    <li class='flex cursor-pointer group relative items-center gap-[2px]'>Membership
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-4 h-4 mt-[3px]">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        </svg>
+
+                        <ul class='dropdownMenu z-20 w-[250px]'>
+                            <li class='px-4 text-sm py-4 hover:bg-gray-900/50 hover:bg-white hover:text-gray-700'><a
+                                    href="../thailand-elite-easy-access.html" class="hover:text-gray-700">ELITE EASY
+                                    ACCESS</a></li>
+                            <li class='px-4 text-sm py-4 hover:bg-gray-900/50 hover:bg-white hover:text-gray-700'><a
+                                    href="../thailand-elite- family-excursion.html">ELITE FAMILY EXCURSION </a></li>
+                            <li class='px-4 text-sm py-4 hover:bg-gray-900/50 hover:bg-white hover:text-gray-700'><a
+                                    href="/about">ELITE MAXIMA HEALTH</a>
+                            </li>
+                            <li class='px-4 text-sm py-4 hover:bg-gray-900/50 hover:bg-white hover:text-gray-700'><a
+                                    href="../thailand-elite-family-alternative.html" class="hover:text-gray-700">ELITE
+                                    ALTERNATIVE</a></li>
+                            <li class='px-4 text-sm py-4 hover:bg-gray-900/50 hover:bg-white hover:text-gray-700'><a
+                                    href="../thailand-elite-privilege-access.html" class="hover:text-gray-700">ELITE
+                                    PRIVILEGE ACCESS </a></li>
+                            <li class='px-4 text-sm py-4 hover:bg-gray-900/50 hover:bg-white hover:text-gray-700'><a
+                                    href="../thailand-elite-family-premium.html" class="hover:text-gray-700">ELITE
+                                    FAMILY PREMIUM</a></li>
+                            <li class='px-4 text-sm py-4 hover:bg-gray-900/50 hover:bg-white hover:text-gray-700'><a
+                                    href="../thailand-elite-superiority-extension.html"
+                                    class="hover:text-gray-700">ELITE SUPERIORITY EXTENSION</a>
+                            </li>
+                            <li class='px-4 text-sm py-4 hover:bg-gray-900/50 hover:bg-white hover:text-gray-700'><a
+                                    href="../thailand-elite-ultimate-privilege.html" class="hover:text-gray-700">ELITE
+                                    ULTIMATE PRIVILEGES</a></li>
+                        </ul>
+                    </li>
+
+                    <a href='/faq'>FAQ</a>
+                    <br />
+                    <a href="/contact">Contact</a>
+                </nav>
+                <button
+                    class="border-2 aplyBtn hidden md:hidden md:text-lg text-sm mt-6 border-[#a38c1a] duration-500 text-white hover:bg-[#a38c1a] px-4 md:px-10 py-[2px] md:py-2">
+                    <a href="https://www.ethailandelitevisa.com/apply-free-approval/">
+                        APPLY NOW
+                    </a>
+                </button>
+            </div>
+
+
+            <div class="btn">
+                <button
+                    class="border-2 hidden md:block md:text-lg text-sm mt-6 border-[#a38c1a] duration-500 text-white hover:bg-[#a38c1a] px-4 md:px-10 py-[2px] md:py-2">
+                    <a href="https://www.ethailandelitevisa.com/apply-free-approval/">
+                        APPLY NOW
+                    </a>
+                </button>
+            </div>
+        </header>
+    </div>
+    <script>
+        const menu = document.querySelector(".navigationMenu nav");
+        const openBtn = document.querySelector(".openBtn");
+        const aplyBtn = document.querySelector(".aplyBtn");
+        const closeBtn = document.querySelector(".closeBtn");
+        openBtn.addEventListener("click", () => {
+
+            openBtn.classList.add("hidden");
+            closeBtn.classList.remove("hidden");
+            menu.classList.remove("hidden");
+            aplyBtn.classList.remove("hidden");
+        })
+        closeBtn.addEventListener("click", () => {
+            openBtn.classList.remove("hidden");
+            closeBtn.classList.add("hidden");
+            menu.classList.add("hidden");
+            aplyBtn.classList.add("hidden");
+        })
+    </script>
+</body>
+
+</html>

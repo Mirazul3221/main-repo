@@ -1,0 +1,16 @@
+.ans{
+    display: none;
+}
+.active .ans{
+    display: block;
+}
+.minus{
+    display: none;
+}
+.active .minus{
+    display: inline;
+}
+.active .plus{
+
+    display: none;
+}

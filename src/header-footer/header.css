@@ -1,0 +1,74 @@
+.dropdownMenu{
+    position: absolute;
+    top: 100%;
+    background: #000000;
+}
+.dropdownMenu li{
+    display: none;
+}
+
+.navigationMenu li:hover .dropdownMenu li{
+    display: block;
+    color: aliceblue;
+}
+
+.navigationMenu li:hover .dropdownMenu{
+    perspective: 1000px;
+}
+
+.navigationMenu li:hover .dropdownMenu li{
+    transform-origin: top left;
+    opacity: 0;
+}
+
+.navigationMenu li:hover .dropdownMenu li:nth-child(1){
+    animation: animate 300ms ease-in-out forwards;
+    animation-delay: -50ms;
+}
+.navigationMenu li:hover .dropdownMenu li:nth-child(2){
+    animation: animate 300ms ease-in-out forwards;
+    animation-delay: 0ms;
+}
+.navigationMenu li:hover .dropdownMenu li:nth-child(3){
+    animation: animate 300ms ease-in-out forwards;
+    animation-delay: 50ms;
+}
+.navigationMenu li:hover .dropdownMenu li:nth-child(4){
+    animation: animate 300ms ease-in-out forwards;
+    animation-delay: 100ms;
+}
+.navigationMenu li:hover .dropdownMenu li:nth-child(5){
+    animation: animate 300ms ease-in-out forwards;
+    animation-delay: 150ms;
+}
+.navigationMenu li:hover .dropdownMenu li:nth-child(6){
+    animation: animate 300ms ease-in-out forwards;
+    animation-delay: 200ms;
+}
+.navigationMenu li:hover .dropdownMenu li:nth-child(7){
+    animation: animate 300ms ease-in-out forwards;
+    animation-delay: 250ms;
+}
+.navigationMenu li:hover .dropdownMenu li:nth-child(8){
+    animation: animate 300ms ease-in-out forwards;
+    animation-delay: 300ms;
+}
+
+nav .active{
+  color: #d19900;
+}
+
+
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: rotateZ(90deg);
+    }
+    70%{
+        transform: skewX(10deg);
+    }
+    100%{
+        opacity: 1;
+        transform: rotateZ(0deg);
+    }
+}
